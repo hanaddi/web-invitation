@@ -51,6 +51,17 @@ jobs:
           # cp -r source/build/* public/
           # cp -r source/out/* public/
 
+      - name: Minify files
+        uses: devatherock/minify-js@v3.1.0
+        with:
+          directory: 'public'
+          add_suffix: false
+          inclusions: |-
+            *.html
+            *.js
+            *.css
+            *.xml
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
