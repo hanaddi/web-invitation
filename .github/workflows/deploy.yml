@@ -42,9 +42,11 @@ jobs:
         run: |
           mkdir public
           mkdir public/sample
+          mkdir public/musics
 
           # Static site
           cp -r source/sample/* public/sample/
+          cp -r source/musics/*.mp3 public/musics/
 
           # If using a framework:
           # cp -r source/dist/* public/
